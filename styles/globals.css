@@ -3,9 +3,26 @@
 @tailwind utilities;
 
 @layer components {
-
-    .nav-link{
+    .nav-link {
         @apply cursor-pointer after:content-[""] after:scale-x-0 after:duration-200 after:transition after:ease-in-out after:block after:border-b-black after:border-b-2 after:origin-[0%_50%] after:hover:scale-x-100;
     }
 }
 
+
+.burger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 11px);
+}
+.burger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.burger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -11px);
+}
+.menu {
+    left: -150%;
+    transition: 0.3s;
+}
+
+.menu.active {
+    left: 0;
+}
