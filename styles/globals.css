@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .nav-link{
+        @apply cursor-pointer after:content-[""] after:scale-x-0 after:duration-200 after:transition after:ease-in-out after:block after:border-b-black after:border-b-2 after:origin-[0%_50%] after:hover:scale-x-100;
+    }
+}
+
