@@ -55,7 +55,7 @@ export default function Home() {
                     <img src="/gumroad-logo.svg" width="100%" ref={imgRef} />
                 </div>
                 <div
-                    className={`flex justify-between items-center sticky top-0 pl-[2rem] bg-white border-b-2 border-b-black ${
+                    className={`flex justify-between items-center sticky z-10 top-0 pl-[2rem] bg-white border-b-2 border-b-black ${
                         isOpen ? "nav active" : ""
                     }`}
                 >
@@ -143,7 +143,15 @@ export default function Home() {
                     </div>
                 </div>
                 <MyMarquee/>
-                hkgfld;hk
+                <div className="py-20 border-b-black border-b-2">
+                  testeste Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam, optio cum iusto praesentium corrupti voluptatum repellendus nesciunt minus fuga.
+                </div>
+                <div className="flex py-40 flex-col items-center justify-center relative border-b-black border-b-2">
+                    <h2 className="font-bold text-6xl">Make your own road</h2>
+                    <p className="w-[50%] text-center  font-semibold text-xl py-8">Whether you need more balance, flexibility, or just a different gig, we make it easier to chart a new path. You don't have to be a tech expert or even understand how to start a business. You just gotta take what you know and sell it.</p>
+                    <div className="nav-link w-fit text-xl font-bold">Explore Features →</div>
+                    <img src="/exciting.svg" className="absolute -top-20 right-32" alt="" />
+                </div>
             </main>
         </div>
     );
