@@ -139,18 +139,50 @@ export default function Home() {
                             width="70%"
                             className="mx-auto"
                         />
-                        <p className="pt-10 pl-10 text-xl font-semibold">Vegalia sells Procreate brushes</p>
+                        <p className="pt-10 pl-10 text-xl font-semibold">
+                            Vegalia sells Procreate brushes
+                        </p>
                     </div>
                 </div>
-                <MyMarquee/>
-                <div className="py-20 border-b-black border-b-2">
-                  testeste Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem veniam, optio cum iusto praesentium corrupti voluptatum repellendus nesciunt minus fuga.
+                <MyMarquee />
+                <div className="py-20 text-center text-4xl w-[70%] md:w-[60%] mx-auto">
+                    You know all those great ideas you have? We want you to try
+                    them, lots of them, and find out what works.
+                </div>
+                <div className="border-t-2 border-t-black border-b-black border-b-2 grid grid-cols-1 lg:grid-cols-2">
+                    <div className="bg-[#b23287] text-center flex items-center justify-center px-40 border-black border-b-2 font-semibold text-4xl min-h-[22rem]">Don’t take risks. That’s scary!</div>
+                    <div className="bg-[#ff90e8] text-center flex border-black border-b-2 border-l-2 items-center justify-center px-40 font-semibold text-4xl min-h-[22rem]">Place small bets.
+That’s exciting!</div>
+                    <div className="relative bg-black p-10">
+                        <img src="/book.svg" className="mx-auto" alt="" />
+                        <div className="absolute bg-white top-2 text-black p-6 text-xl font-semibold rounded-lg border-black border-2">
+                        ...Instead of selling a book...
+                        </div>
+                    </div>
+                    <div className="relative p-10 border-l-2 border-black bg-[#ffc900]">
+                        <div className="absolute bg-white top-2 text-black p-6 text-xl font-semibold rounded-lg border-black border-2">
+                        ...start by selling a blog post!
+                        </div>
+                        <img src="/blog-post.svg" className="mx-auto" alt="" />
+                    </div>
                 </div>
                 <div className="flex py-40 flex-col items-center justify-center relative border-b-black border-b-2">
                     <h2 className="font-bold text-6xl">Make your own road</h2>
-                    <p className="w-[50%] text-center  font-semibold text-xl py-8">Whether you need more balance, flexibility, or just a different gig, we make it easier to chart a new path. You don't have to be a tech expert or even understand how to start a business. You just gotta take what you know and sell it.</p>
-                    <div className="nav-link w-fit text-xl font-bold">Explore Features →</div>
-                    <img src="/exciting.svg" className="absolute -top-20 right-32" alt="" />
+                    <p className="w-[50%] text-center  font-semibold text-xl py-8">
+                        Whether you need more balance, flexibility, or just a
+                        different gig, we make it easier to chart a new path.
+                        You don't have to be a tech expert or even understand
+                        how to start a business. You just gotta take what you
+                        know and sell it.
+                    </p>
+                    <div className="nav-link w-fit text-xl font-bold">
+                        Explore Features →
+                    </div>
+                    <img
+                        src="/exciting.svg"
+                        className="absolute -top-20 right-32"
+                        alt=""
+                    />
                 </div>
             </main>
         </div>
