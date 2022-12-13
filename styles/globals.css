@@ -8,6 +8,25 @@
     }
 }
 
+*{
+    box-sizing: border-box;
+}
+
+.tag{
+    transition: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    border: 1px solid black;
+}
+/* a shadow that stays there when hovered */
+
+
+
+.tag:hover{
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    transform: translate(-4px, -4px);
+}
 
 .burger.active .bar:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 11px);

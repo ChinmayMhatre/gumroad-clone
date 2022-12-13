@@ -3,8 +3,111 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect, useRef } from "react";
 import MyMarquee from "../components/MyMarquee";
+import Card from "../components/Card";
 
+const cardData = [
+    {
+        id: 1,
+        img: "/cards/1.svg",
+        title: "3D",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 2,
+        img: "/cards/2.svg",
+        title: "2D",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 3,
+        img: "/cards/3.svg",
+        title: "Music",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 4,
+        img: "/cards/4.svg",
+        title: "Writing",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 5,
+        img: "/cards/5.svg",
+        title: "Photography",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 6,
+        img: "/cards/6.svg",
+        title: "Video",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 7,
+        img: "/cards/7.svg",
+        title: "Podcast",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 8,
+        img: "/cards/8.svg",
+
+        title: "Audio",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 9,
+        img: "/cards/9.svg",
+        title: "Art",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 10,
+        img: "/cards/10.svg",
+        title: "Code",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 11,
+        img: "/cards/11.svg",
+        title: "Business",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+    {
+        id: 12,
+        img: "/cards/12.svg",
+        title: "Marketing",
+        desc:
+            "From fiction to nonfiction, self-help to cookbooks, and everything in between.",
+        tags: ["Blender", "Maya", "Cinema 4D"],
+    },
+
+]
 export default function Home() {
+
+
     const [displayLogo, setDisplayLogo] = useState(true);
     const [offSet, setOffSet] = useState(null);
     const imgRef = useRef(null);
@@ -55,9 +158,8 @@ export default function Home() {
                     <img src="/gumroad-logo.svg" width="100%" ref={imgRef} />
                 </div>
                 <div
-                    className={`flex justify-between items-center sticky z-10 top-0 pl-[2rem] bg-white border-b-2 border-b-black ${
-                        isOpen ? "nav active" : ""
-                    }`}
+                    className={`flex justify-between items-center sticky z-10 top-0 pl-[2rem] bg-white border-b-2 border-b-black ${isOpen ? "nav active" : ""
+                        }`}
                 >
                     <div className={`${displayLogo ? "block" : "hidden"}  `}>
                         <img src="/gumroad-logo.svg" width="100%" />
@@ -79,9 +181,8 @@ export default function Home() {
                     </div>
                     <button
                         onClick={toggleMenu}
-                        className={`burger ${
-                            isOpen ? "active" : ""
-                        } transition-all duration-200 lg:hidden p-[1.5rem]`}
+                        className={`burger ${isOpen ? "active" : ""
+                            } transition-all duration-200 lg:hidden p-[1.5rem]`}
                     >
                         <div className="bar transition-all duration-200 w-8 h-1 bg-black"></div>
                         <div className="bar transition-all duration-200 w-8 h-1 mt-2 bg-black"></div>
@@ -89,11 +190,10 @@ export default function Home() {
                     </button>
                 </div>
                 <div
-                    className={`menu lg:hidden fixed h-screen -z-10 bg-black w-screen top-10 ${
-                        isOpen ? "active" : ""
-                    }`}
+                    className={`menu lg:hidden fixed h-screen z-10 bg-black w-screen top-20 ${isOpen ? "active" : ""
+                        }`}
                 >
-                    <div className="h-screen px-10 lg:hidden">
+                    <div className="h-screen px-10  lg:hidden">
                         <div className="text-white text-lg font-bold hover:text-[#ff90e8] py-6">
                             Login
                         </div>
@@ -152,16 +252,16 @@ export default function Home() {
                 <div className="border-t-2 border-t-black border-b-black border-b-2 grid grid-cols-1 lg:grid-cols-2">
                     <div className="bg-[#b23287] text-center flex items-center justify-center px-40 border-black border-b-2 font-semibold text-4xl min-h-[22rem]">Don’t take risks. That’s scary!</div>
                     <div className="bg-[#ff90e8] text-center flex border-black border-b-2 border-l-2 items-center justify-center px-40 font-semibold text-4xl min-h-[22rem]">Place small bets.
-That’s exciting!</div>
+                        That’s exciting!</div>
                     <div className="relative bg-black p-10">
                         <img src="/book.svg" className="mx-auto" alt="" />
                         <div className="absolute bg-white top-2 text-black p-6 text-xl font-semibold rounded-lg border-black border-2">
-                        ...Instead of selling a book...
+                            ...Instead of selling a book...
                         </div>
                     </div>
                     <div className="relative p-10 border-l-2 border-black bg-[#ffc900]">
                         <div className="absolute bg-white top-2 text-black p-6 text-xl font-semibold rounded-lg border-black border-2">
-                        ...start by selling a blog post!
+                            ...start by selling a blog post!
                         </div>
                         <img src="/blog-post.svg" className="mx-auto" alt="" />
                     </div>
@@ -183,6 +283,23 @@ That’s exciting!</div>
                         className="absolute -top-20 right-32"
                         alt=""
                     />
+                </div>
+                <div className="py-20 px-20">
+                    <h2 className="text-center text-4xl font-semibold">Looking for inspiration on what you can sell?</h2>
+                    <h3 className="text-center text-2xl py-10">Discover the best-selling products and creators on Gumroad</h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6">
+                        {
+                            cardData.map((item) => {
+                                return (
+                                    <Card
+                                        data={item}
+                                    />
+                                )
+                            })
+                        }
+                    </div>
+
                 </div>
             </main>
         </div>
