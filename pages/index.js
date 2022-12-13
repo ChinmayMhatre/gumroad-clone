@@ -219,7 +219,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className=" flex flex-col lg:flex-row items-center">
-                    <div className=" p-[6.5vw] w-full lg:w-1/2 h-[90vh] bg-[#ff90e8] border-r-2 border-black">
+                    <div className=" p-[6.5vw] flex flex-col items-center justify-center w-full lg:w-1/2 h-[90vh] bg-[#ff90e8] border-r-2 border-black">
                         <h1 className="text-center lg:text-left text-[5rem] tracking-wide font-bold leading-tight">
                             Go From <br />
                             <span> zero to $1 </span>
@@ -229,8 +229,13 @@ export default function Home() {
                             online. Just start with what you know, see what
                             sticks, and get paid. It’s that easy.
                         </p>
-                        <button className="mt-10 px-[2rem] py-[1.1rem] rounded-md text-white bg-black text-center text-[1.25rem] font-semibold">
-                            Start Selling
+                        <button className="button mt-20 rounded-md text-center text-[1.25rem] font-semibold">
+                            <span></span>
+                            <span></span>
+                            <span>
+                                Start Selling
+                            </span>
+
                         </button>
                     </div>
                     <div className="w-full lg:w-1/2 h-[90vh] bg-[#ffc900] py-14">
@@ -285,7 +290,7 @@ export default function Home() {
                     />
                 </div>
                 <div className="py-20 px-20">
-                    <h2 className="text-center text-4xl font-semibold">Looking for inspiration on what you can sell?</h2>
+                    <h2 className="text-center text-4xl font-bold">Looking for inspiration on what you can sell?</h2>
                     <h3 className="text-center text-2xl py-10">Discover the best-selling products and creators on Gumroad</h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-6">
@@ -293,6 +298,7 @@ export default function Home() {
                             cardData.map((item) => {
                                 return (
                                     <Card
+                                        key={item.id}
                                         data={item}
                                     />
                                 )
